@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.*;
@@ -111,7 +110,7 @@ public class Stack_Activity extends AppCompatActivity {
 
         inputText = findViewById(R.id.input);
 
-        arr0 = findViewById(R.id.arr_0);
+        arr0 = findViewById(R.id.q1);
         arr1 = findViewById(R.id.arr_1);
         arr2 = findViewById(R.id.arr_2);
         arr3 = findViewById(R.id.arr_3);

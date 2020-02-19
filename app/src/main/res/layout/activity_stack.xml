@@ -7,7 +7,7 @@
     tools:context=".Stack_Activity">
 
     <TextView
-        android:id="@+id/arr_0"
+        android:id="@+id/q1"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="27dp"
@@ -59,7 +59,7 @@
         android:layout_marginLeft="27dp"
         android:layout_marginTop="97dp"
         android:background="#1DF59696"
-        app:layout_constraintStart_toEndOf="@+id/arr_0"
+        app:layout_constraintStart_toEndOf="@+id/q1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -72,7 +72,7 @@
         android:layout_marginTop="108dp"
         android:text="Push"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arr_0" />
+        app:layout_constraintTop_toBottomOf="@+id/q1" />
 
     <Button
         android:id="@+id/button_pop"

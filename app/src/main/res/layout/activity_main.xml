@@ -48,7 +48,7 @@
         android:layout_marginLeft="45dp"
         android:layout_marginTop="25dp"
         android:onClick="openActivity2"
-        android:text="button_2"
+        android:text="Queue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
