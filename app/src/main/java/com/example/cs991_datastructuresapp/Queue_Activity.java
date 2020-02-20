@@ -14,7 +14,9 @@ public class Queue_Activity extends AppCompatActivity {
 
     private Queue<String> q;
     private int currIndex;
+    private int tempIndex;
     private String[] tempArr;
+
 
     Button enqueueButton;
     Button dequeueButton;
@@ -46,6 +48,13 @@ public class Queue_Activity extends AppCompatActivity {
         this.currIndex = currIndex;
     }
 
+    public int getTempIndex() {
+        return tempIndex;
+    }
+
+    public void setTempIndex(int tempIndex) {
+        this.tempIndex = tempIndex;
+    }
 
     /**
      Constructor
@@ -53,6 +62,7 @@ public class Queue_Activity extends AppCompatActivity {
     public Queue_Activity(){
         q = new LinkedList<String>();
         tempArr = new String[5];
+        setTempIndex(0);
         setCurrIndex(0);
     }
 
@@ -62,14 +72,23 @@ public class Queue_Activity extends AppCompatActivity {
      */
 
     public void enqueue(){
-        q.add(inputText.getText().toString());
-        tempArr[getCurrIndex()] = inputText.getText().toString();
+        if (q.size() < 5){
+            q.add(inputText.getText().toString());
+            tempArr[getCurrIndex()] = inputText.getText().toString();
+        }
+        updateDisplay();
         setCurrIndex(getCurrIndex()+1);
+    }
+
+    public void dequeue(){
+        tempArr[tempIndex] = "";
+        setTempIndex(getTempIndex()+1);
         updateDisplay();
     }
 
     public void updateDisplay(){
         head.setText(q.peek());
+
         q1.setText(tempArr[0]);
         q2.setText(tempArr[1]);
         q3.setText(tempArr[2]);
@@ -95,7 +114,6 @@ public class Queue_Activity extends AppCompatActivity {
         head = findViewById(R.id.head);
         tail = findViewById(R.id.tail);
 
-
         enqueueButton = (Button)findViewById(R.id.button_enqueue);
         dequeueButton = (Button)findViewById(R.id.button_dequeue);
 
@@ -103,6 +121,13 @@ public class Queue_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 enqueue();
+            }
+        });
+
+        dequeueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dequeue();
             }
         });
 
