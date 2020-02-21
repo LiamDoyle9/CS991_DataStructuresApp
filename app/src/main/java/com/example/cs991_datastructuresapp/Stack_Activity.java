@@ -17,15 +17,15 @@ public class Stack_Activity extends AppCompatActivity {
 
     TextView inputText;
 
-    TextView arr0;
-    TextView arr1;
-    TextView arr2;
-    TextView arr3;
-    TextView arr4;
+    TextView arr0;          // 1st element of the stack
+    TextView arr1;          // 2nd element of the stack
+    TextView arr2;          // 3rd element of the stack
+    TextView arr3;          // 4th element of the stack
+    TextView arr4;          // 5th element of the stack
 
     private Stack<String> stack = new Stack<String>();
-    private Object[] arr = stack.toArray();
-    private int currIndex;
+    private Object[] arr = stack.toArray();                 // Array used to access individual elements of the "stack" and send them to relevant TextView
+    private int currIndex;                                  // Used to keep track of current index
 
 
     /**
@@ -79,25 +79,34 @@ public class Stack_Activity extends AppCompatActivity {
         setCurrIndex(getCurrIndex()+1);
     }
 
-    public void popStack(){
 
-        if (stack.size() == 1){
-            arr0.setText("");
+    public void popStack(){
+        if (stack.size() == 0) {
+
+            //NEED TO CATCH THE INSTANCE OF USER TRYING TO POP STACK WHEN STACK SIZE == 0
+
+            //NEED TO CATCH THE INSTANCE OF USER TRYING TO POP STACK WHEN STACK SIZE == 5
+
+        } else {
+            if (stack.size() == 1){
+                arr0.setText("");
+            }
+            if (stack.size() == 2){
+                arr1.setText("");
+            }
+            if (stack.size() == 3){
+                arr2.setText("");
+            }
+            if (stack.size() == 4){
+                arr3.setText("");
+            }
+            if (stack.size() == 5){
+                arr4.setText("");
+            }
+            stack.pop();
+            setCurrIndex(getCurrIndex()-1);
         }
-        if (stack.size() == 2){
-            arr1.setText("");
-        }
-        if (stack.size() == 3){
-            arr2.setText("");
-        }
-        if (stack.size() == 4){
-            arr3.setText("");
-        }
-        if (stack.size() == 5){
-            arr4.setText("");
-        }
-        stack.pop();
-        setCurrIndex(getCurrIndex()-1);
+
     }
 
 

@@ -60,7 +60,7 @@
         android:layout_marginLeft="45dp"
         android:layout_marginTop="25dp"
         android:onClick="openActivity3"
-        android:text="button_3"
+        android:text="Bubble Sort"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

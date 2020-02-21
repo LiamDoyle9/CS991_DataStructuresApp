@@ -27,7 +27,7 @@ public class Queue_Activity extends AppCompatActivity {
     TextView q4;
     TextView q5;
     TextView head;
-    TextView tail;
+    TextView tail;      //DO NOT NEED A TAIL ANYMORE.
 
     /**
      * Setters & Getters
