@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sort">
+
+    <TextView
+        android:id="@+id/arr_0_0"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arr_unsorted" />
+
+    <TextView
+        android:id="@+id/arr_0_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/arr_0_0"
+        app:layout_constraintTop_toBottomOf="@+id/arr_unsorted" />
+
+    <TextView
+        android:id="@+id/arr_0_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/arr_0_1"
+        app:layout_constraintTop_toBottomOf="@+id/arr_unsorted" />
+
+    <TextView
+        android:id="@+id/arr_0_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="4"
+        app:layout_constraintStart_toEndOf="@+id/arr_0_2"
+        app:layout_constraintTop_toBottomOf="@+id/arr_unsorted" />
+
+    <TextView
+        android:id="@+id/arr_0_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/arr_0_3"
+        app:layout_constraintTop_toBottomOf="@+id/arr_unsorted" />
+
+    <TextView
+        android:id="@+id/arr_1_0"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arr_0_0" />
+
+    <TextView
+        android:id="@+id/arr_1_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/arr_1_0"
+        app:layout_constraintTop_toBottomOf="@+id/arr_0_1" />
+
+    <TextView
+        android:id="@+id/arr_1_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/arr_1_1"
+        app:layout_constraintTop_toBottomOf="@+id/arr_0_2" />
+
+    <TextView
+        android:id="@+id/arr_1_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="4"
+        app:layout_constraintStart_toEndOf="@+id/arr_1_2"
+        app:layout_constraintTop_toBottomOf="@+id/arr_0_3" />
+
+    <TextView
+        android:id="@+id/arr_1_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/arr_1_3"
+        app:layout_constraintTop_toBottomOf="@+id/arr_0_4" />
+
+
+
+
+    <TextView
+        android:id="@+id/arr_2_0"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arr_1_0" />
+
+    <TextView
+        android:id="@+id/arr_2_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="2"
+        app:layout_constraintStart_toEndOf="@+id/arr_2_0"
+        app:layout_constraintTop_toBottomOf="@+id/arr_1_1" />
+
+    <TextView
+        android:id="@+id/arr_2_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="3"
+        app:layout_constraintStart_toEndOf="@+id/arr_2_1"
+        app:layout_constraintTop_toBottomOf="@+id/arr_1_2" />
+
+    <TextView
+        android:id="@+id/arr_2_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="4"
+        app:layout_constraintStart_toEndOf="@+id/arr_2_2"
+        app:layout_constraintTop_toBottomOf="@+id/arr_1_3" />
+
+    <TextView
+        android:id="@+id/arr_2_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="27dp"
+        android:background="#1DF59696"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/arr_2_3"
+        app:layout_constraintTop_toBottomOf="@+id/arr_1_4" />
+
+
+    <TextView
+        android:id="@+id/arr_unsorted"
+        android:layout_width="357dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:background="#1DF59696"
+        android:inputType="text"
+        android:text="Unsorted Array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/arr_sorted"
+        android:layout_width="357dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:background="#1DF59696"
+        android:text="Sorted Array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arr0" />
+
+    <Button
+        android:id="@+id/button_sort"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="151dp"
+        android:layout_marginLeft="151dp"
+        android:layout_marginTop="27dp"
+        android:text="Bubble Sort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arr_sorted" />
+
+    <TextView
+        android:id="@+id/arr0"
+        android:layout_width="357dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:background="#1DF59696"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arr_2_0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

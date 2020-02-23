@@ -24,6 +24,12 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
+    public void openActivity3(View view){
+        Intent intent = new Intent(this, Sort.class);
+        startActivity(intent);
+    }
+
+
 
 
 

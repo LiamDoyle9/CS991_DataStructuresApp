@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
@@ -29,7 +29,7 @@
         app:srcCompat="@android:color/darker_gray" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button_stack"
         android:layout_width="320dp"
         android:layout_height="65dp"
         android:layout_marginStart="45dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_queue"
         android:layout_width="320dp"
         android:layout_height="65dp"
         android:layout_marginStart="45dp"
@@ -50,17 +50,18 @@
         android:onClick="openActivity2"
         android:text="Queue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/button_stack" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_bsort"
         android:layout_width="320dp"
-        android:layout_height="65dp"
+        android:layout_height="60dp"
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
         android:layout_marginTop="25dp"
         android:onClick="openActivity3"
-        android:text="Bubble Sort"
+        android:text="BSort"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button_queue" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
