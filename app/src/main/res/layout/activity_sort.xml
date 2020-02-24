@@ -219,7 +219,7 @@
         android:text="Sorted Array"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arr0" />
+        app:layout_constraintTop_toBottomOf="@+id/arr_0" />
 
     <Button
         android:id="@+id/button_sort"
@@ -233,7 +233,7 @@
         app:layout_constraintTop_toBottomOf="@+id/arr_sorted" />
 
     <TextView
-        android:id="@+id/arr0"
+        android:id="@+id/arr_0"
         android:layout_width="357dp"
         android:layout_height="50dp"
         android:layout_marginStart="27dp"

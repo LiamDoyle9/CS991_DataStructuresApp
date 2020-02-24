@@ -188,7 +188,7 @@ public class Sort extends AppCompatActivity {
         unsortedArray = findViewById(R.id.arr_unsorted);
         sortedArray = findViewById(R.id.arr_sorted);
 
-        arr0 = findViewById(R.id.arr0);
+        arr0 = findViewById(R.id.arr_0);
 
         arr_0_0 = findViewById(R.id.arr_0_0);
         arr_0_1 = findViewById(R.id.arr_0_1);

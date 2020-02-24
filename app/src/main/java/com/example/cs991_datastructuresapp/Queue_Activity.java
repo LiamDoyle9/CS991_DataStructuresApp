@@ -15,11 +15,10 @@ public class Queue_Activity extends AppCompatActivity {
     private Queue<String> q;
     private int currIndex;
     private int tempIndex;
-    private String[] tempArr;
+    private String[] displayArr;
 
-
-    Button enqueueButton;
-    Button dequeueButton;
+    Button addButton;
+    Button removeButton;
     TextView inputText;
     TextView q1;
     TextView q2;
@@ -27,7 +26,6 @@ public class Queue_Activity extends AppCompatActivity {
     TextView q4;
     TextView q5;
     TextView head;
-    TextView tail;      //DO NOT NEED A TAIL ANYMORE.
 
     /**
      * Setters & Getters
@@ -56,14 +54,23 @@ public class Queue_Activity extends AppCompatActivity {
         this.tempIndex = tempIndex;
     }
 
+    public String[] getDisplayArr() {
+        return displayArr;
+    }
+
+    public void setDisplayArr(String[] displayArr) {
+        this.displayArr = displayArr;
+    }
+
     /**
      Constructor
      **/
     public Queue_Activity(){
         q = new LinkedList<String>();
-        tempArr = new String[5];
+        displayArr = new String[5];
         setTempIndex(0);
         setCurrIndex(0);
+
     }
 
 
@@ -71,33 +78,31 @@ public class Queue_Activity extends AppCompatActivity {
      * Class Methods
      */
 
-    public void enqueue(){
-        if (q.size() < 5){
+    public void addElement(){
+        if (q.size() < 5 ){
             q.add(inputText.getText().toString());
-            tempArr[getCurrIndex()] = inputText.getText().toString();
+            displayArr[getCurrIndex()] = inputText.getText().toString();
         }
         updateDisplay();
         setCurrIndex(getCurrIndex()+1);
     }
 
-    public void dequeue(){
-        tempArr[tempIndex] = "";
+    public void removeElement(){
+        displayArr[tempIndex] = "";
+        q.remove();
         setTempIndex(getTempIndex()+1);
         updateDisplay();
+
     }
 
     public void updateDisplay(){
         head.setText(q.peek());
-
-        q1.setText(tempArr[0]);
-        q2.setText(tempArr[1]);
-        q3.setText(tempArr[2]);
-        q4.setText(tempArr[3]);
-        q5.setText(tempArr[4]);
+        q1.setText(displayArr[0]);
+        q2.setText(displayArr[1]);
+        q3.setText(displayArr[2]);
+        q4.setText(displayArr[3]);
+        q5.setText(displayArr[4]);
     }
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,22 +117,21 @@ public class Queue_Activity extends AppCompatActivity {
         q4 = findViewById(R.id.q4);
         q5 = findViewById(R.id.q5);
         head = findViewById(R.id.head);
-        tail = findViewById(R.id.tail);
 
-        enqueueButton = (Button)findViewById(R.id.button_enqueue);
-        dequeueButton = (Button)findViewById(R.id.button_dequeue);
+        addButton = (Button)findViewById(R.id.button_add);
+        removeButton = (Button)findViewById(R.id.remove);
 
-        enqueueButton.setOnClickListener(new View.OnClickListener() {
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                enqueue();
+                addElement();
             }
         });
 
-        dequeueButton.setOnClickListener(new View.OnClickListener() {
+        removeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dequeue();
+                removeElement();
             }
         });
 

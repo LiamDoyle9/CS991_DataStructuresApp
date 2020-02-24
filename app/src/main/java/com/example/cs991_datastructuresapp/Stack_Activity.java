@@ -119,7 +119,7 @@ public class Stack_Activity extends AppCompatActivity {
 
         inputText = findViewById(R.id.input);
 
-        arr0 = findViewById(R.id.q1);
+        arr0 = findViewById(R.id.arr_0);
         arr1 = findViewById(R.id.arr_1);
         arr2 = findViewById(R.id.arr_2);
         arr3 = findViewById(R.id.arr_3);
