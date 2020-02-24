@@ -96,10 +96,11 @@ public class Sort extends AppCompatActivity {
         this.map = map;
     }
 
+
+
     /**
      * Class Methods
      */
-
 
     public int[] generateUnsortedArr(int[] array){
         int temp = 5;
@@ -121,7 +122,7 @@ public class Sort extends AppCompatActivity {
         arr0.setText(getMapValue(0));
     }
 
-    public void getIncrements(int i, int[]array){
+    public void storeIncrements(int i, int[]array){
         map.put(i, array);
     }
 
@@ -134,12 +135,10 @@ public class Sort extends AppCompatActivity {
             for (int j = 1; j < (array.length - i); j++){
                 if (array[j-1] > array[j]) {
                     temp = array[j-1];
-                    getIncrements(i, array);  /// WHYYYY IS THIS NOT WORKING ????? -.-
                     array[j-1] = array[j];
                     array[j] = temp;
-                    //map.put(i, array);
+                    storeIncrements(i, array);  ///WHYYYY IS THIS NOT WORKING ????? -.-
                 }
-
             }
         }
         return array;

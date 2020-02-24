@@ -59,55 +59,55 @@ public class Stack_Activity extends AppCompatActivity {
     /**
      * Class Methods
      */
-    public void pushStack(){
-        stack.push(inputText.getText().toString());
-        if (stack.size() == 1){
-            arr0.setText(stack.get(getCurrIndex()));
+    public void pushStack() {
+
+        if (getCurrIndex() >= 0 && getCurrIndex() < 5) {
+            stack.push(inputText.getText().toString());
+            if (stack.size() == 1) {
+                arr0.setText(stack.get(getCurrIndex()));
+            }
+            if (stack.size() == 2) {
+                arr1.setText(stack.get(getCurrIndex()));
+            }
+            if (stack.size() == 3) {
+                arr2.setText(stack.get(getCurrIndex()));
+            }
+            if (stack.size() == 4) {
+                arr3.setText(stack.get(getCurrIndex()));
+            }
+            if (stack.size() == 5) {
+                arr4.setText(stack.get(getCurrIndex()));
+            }
+            setCurrIndex(getCurrIndex() + 1);
         }
-        if (stack.size() == 2){
-            arr1.setText(stack.get(getCurrIndex()));
-        }
-        if (stack.size() == 3){
-            arr2.setText(stack.get(getCurrIndex()));
-        }
-        if (stack.size() == 4){
-            arr3.setText(stack.get(getCurrIndex()));
-        }
-        if (stack.size() == 5){
-            arr4.setText(stack.get(getCurrIndex()));
-        }
-        setCurrIndex(getCurrIndex()+1);
     }
 
 
     public void popStack(){
-        if (stack.size() == 0) {
+            switch (getCurrIndex()){
+                case 0:
+                    arr0.setText("");
+                    break;
+                case 1:
+                    arr1.setText("");
+                    break;
+                case 2:
+                    arr2.setText("");
+                    break;
+                case 3:
+                    arr3.setText("");
+                    break;
+                case 4:
+                    arr4.setText("");
+                    break;
+            }
 
-            //NEED TO CATCH THE INSTANCE OF USER TRYING TO POP STACK WHEN STACK SIZE == 0
-
-            //NEED TO CATCH THE INSTANCE OF USER TRYING TO POP STACK WHEN STACK SIZE == 5
-
-        } else {
-            if (stack.size() == 1){
-                arr0.setText("");
+            if (stack.size() > 0 && stack.size() <= 5){
+                stack.pop();
+                setCurrIndex(getCurrIndex()-1);
             }
-            if (stack.size() == 2){
-                arr1.setText("");
-            }
-            if (stack.size() == 3){
-                arr2.setText("");
-            }
-            if (stack.size() == 4){
-                arr3.setText("");
-            }
-            if (stack.size() == 5){
-                arr4.setText("");
-            }
-            stack.pop();
-            setCurrIndex(getCurrIndex()-1);
         }
 
-    }
 
 
 
