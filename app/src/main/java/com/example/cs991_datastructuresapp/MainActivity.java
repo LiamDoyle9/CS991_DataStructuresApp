@@ -25,14 +25,8 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void openActivity3(View view){
-        Intent intent = new Intent(this, Sort.class);
+        Intent intent =  new Intent(this, BubbleSort_Activity.class);
         startActivity(intent);
     }
-
-
-
-
-
-
 
 }

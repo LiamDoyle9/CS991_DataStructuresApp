@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sort"
+        <activity android:name=".BubbleSort_Activity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Queue_Activity"

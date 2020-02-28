@@ -12,16 +12,16 @@ import java.util.*;
 
 public class Stack_Activity extends AppCompatActivity {
 
-    Button pushButton;
-    Button popButton;
+    private Button pushButton;
+    private Button popButton;
 
-    TextView inputText;
+    private TextView inputText;
 
-    TextView arr0;          // 1st element of the stack
-    TextView arr1;          // 2nd element of the stack
-    TextView arr2;          // 3rd element of the stack
-    TextView arr3;          // 4th element of the stack
-    TextView arr4;          // 5th element of the stack
+    private TextView arr0;          // 1st element of the stack
+    private TextView arr1;          // 2nd element of the stack
+    private TextView arr2;          // 3rd element of the stack
+    private TextView arr3;          // 4th element of the stack
+    private TextView arr4;          // 5th element of the stack
 
     private Stack<String> stack = new Stack<String>();
     private Object[] arr = stack.toArray();                 // Array used to access individual elements of the "stack" and send them to relevant TextView
@@ -59,6 +59,9 @@ public class Stack_Activity extends AppCompatActivity {
     /**
      * Class Methods
      */
+
+
+
     public void pushStack() {
 
         if (getCurrIndex() >= 0 && getCurrIndex() < 5) {
@@ -119,11 +122,11 @@ public class Stack_Activity extends AppCompatActivity {
 
         inputText = findViewById(R.id.input);
 
-        arr0 = findViewById(R.id.arr_0);
-        arr1 = findViewById(R.id.arr_1);
-        arr2 = findViewById(R.id.arr_2);
+        arr0 = findViewById(R.id.arr_0_0);
+        arr1 = findViewById(R.id.arr_0_1);
+        arr2 = findViewById(R.id.arr_0_2);
         arr3 = findViewById(R.id.arr_3);
-        arr4 = findViewById(R.id.arr_4);
+        arr4 = findViewById(R.id.arr_0_3);
 
         pushButton = (Button)findViewById(R.id.button_push);
         popButton = (Button)findViewById(R.id.button_pop);
