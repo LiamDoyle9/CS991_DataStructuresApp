@@ -33,13 +33,12 @@ public class Stack_Activity extends AppCompatActivity {
      */
     public Stack_Activity(){
         currIndex = 0;
-//        stack.empty();
+
     }
 
     /**
      * Setters & Getters
      */
-
     public Stack getStack() {
         return stack;
     }
@@ -59,8 +58,6 @@ public class Stack_Activity extends AppCompatActivity {
     /**
      * Class Methods
      */
-
-
 
     public void pushStack() {
 

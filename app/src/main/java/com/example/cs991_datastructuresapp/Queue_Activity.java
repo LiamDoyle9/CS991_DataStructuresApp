@@ -17,15 +17,15 @@ public class Queue_Activity extends AppCompatActivity {
     private int tempIndex;
     private String[] displayArr;
 
-    Button addButton;
-    Button removeButton;
-    TextView inputText;
-    TextView q1;
-    TextView q2;
-    TextView q3;
-    TextView q4;
-    TextView q5;
-    TextView head;
+    private Button addButton;
+    private Button removeButton;
+    private TextView inputText;
+    private TextView q1;
+    private TextView q2;
+    private TextView q3;
+    private TextView q4;
+    private TextView q5;
+    private TextView head;
 
     /**
      * Setters & Getters
@@ -77,7 +77,6 @@ public class Queue_Activity extends AppCompatActivity {
     /**
      * Class Methods
      */
-
     public void addElement(){
         if (q.size() < 5 ){
             q.add(inputText.getText().toString());

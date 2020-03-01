@@ -11,10 +11,11 @@ import java.util.Arrays;
 
 public class BubbleSort_Activity extends AppCompatActivity {
 
+    private TextView tv_unsortedArray;
+    private TextView tv_sortedArray;
+
     private int[] unsortedArray;
     private int[] sortedArray;
-
-    private TextView arr_unsorted;
 
     private TextView arr_0_0;
     private TextView arr_0_1;
@@ -39,14 +40,6 @@ public class BubbleSort_Activity extends AppCompatActivity {
     private TextView arr_3_2;
     private TextView arr_3_3;
     private TextView arr_3_4;
-
-    private TextView arr_4_0;
-    private TextView arr_4_1;
-    private TextView arr_4_2;
-    private TextView arr_4_3;
-    private TextView arr_4_4;
-
-    private TextView arr_sorted;
 
     private Button button;
 
@@ -73,11 +66,9 @@ public class BubbleSort_Activity extends AppCompatActivity {
     /**
      *Constructor
      */
-
     public BubbleSort_Activity(){
-        unsortedArray = new int[5];
+        unsortedArray = new int[]{5,4,3,2,1};
         sortedArray = new int[5];
-        generateArray();
     }
 
 
@@ -85,18 +76,8 @@ public class BubbleSort_Activity extends AppCompatActivity {
      * Class Methods
      */
 
-    public int[] generateArray(){
-        int temp = 5;
-        for (int i = 0; i < unsortedArray.length; i++){
-            unsortedArray[i] = temp;
-            temp--;
-        }
-        return unsortedArray;
-    }
-
     public void updateDisplay(){
-
-        arr_unsorted.setText(Arrays.toString(unsortedArray));
+        bubbleSort(unsortedArray);
         arr_0_0.setText("4");
         arr_0_1.setText("3");
         arr_0_2.setText("2");
@@ -121,10 +102,11 @@ public class BubbleSort_Activity extends AppCompatActivity {
         arr_3_3.setText("4");
         arr_3_4.setText("5");
 
+        tv_sortedArray.setText(Arrays.toString(bubbleSort(unsortedArray)));
 
     }
 
-    public void bubbleSort(int[]array){
+    public int[] bubbleSort(int[]array){
         int temp = 0;
         for (int i = 0; i < array.length; i++){
             for (int j = 1; j<(array.length-i); j++){
@@ -135,6 +117,7 @@ public class BubbleSort_Activity extends AppCompatActivity {
                 }
             }
         }
+        return array;
     }
 
 
@@ -143,42 +126,41 @@ public class BubbleSort_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bubblesort);
 
-        arr_unsorted.findViewById(R.id.arr_unsorted);
+        tv_unsortedArray = findViewById(R.id.arr_unsorted);
+        tv_sortedArray = findViewById(R.id.arr_sorted);
+        button = findViewById(R.id.button_sort);
 
-        arr_0_0.findViewById(R.id.arr_0_0);
-        arr_0_1.findViewById(R.id.arr_0_1);
-        arr_0_2.findViewById(R.id.arr_0_2);
-        arr_0_3.findViewById(R.id.arr_0_3);
-        arr_0_4.findViewById(R.id.arr_0_4);
+        arr_0_0 = findViewById(R.id.arr_0_0);
+        arr_0_1 = findViewById(R.id.arr_0_1);
+        arr_0_2 = findViewById(R.id.arr_0_2);
+        arr_0_3 = findViewById(R.id.arr_0_3);
+        arr_0_4 = findViewById(R.id.arr_0_4);
 
-        arr_1_0.findViewById(R.id.arr_1_0);
-        arr_1_1.findViewById(R.id.arr_1_1);
-        arr_1_2.findViewById(R.id.arr_1_2);
-        arr_1_3.findViewById(R.id.arr_1_3);
-        arr_1_4.findViewById(R.id.arr_1_4);
+        arr_1_0 = findViewById(R.id.arr_1_0);
+        arr_1_1 = findViewById(R.id.arr_1_1);
+        arr_1_2 = findViewById(R.id.arr_1_2);
+        arr_1_3 = findViewById(R.id.arr_1_3);
+        arr_1_4 = findViewById(R.id.arr_1_4);
 
-        arr_2_0.findViewById(R.id.arr_2_0);
-        arr_2_1.findViewById(R.id.arr_2_1);
-        arr_2_2.findViewById(R.id.arr_2_2);
-        arr_2_3.findViewById(R.id.arr_2_3);
-        arr_2_4.findViewById(R.id.arr_2_4);
+        arr_2_0 = findViewById(R.id.arr_2_0);
+        arr_2_1 = findViewById(R.id.arr_2_1);
+        arr_2_2 = findViewById(R.id.arr_2_2);
+        arr_2_3 = findViewById(R.id.arr_2_3);
+        arr_2_4 = findViewById(R.id.arr_2_4);
 
-        arr_3_0.findViewById(R.id.arr_3_0);
-        arr_3_1.findViewById(R.id.arr_3_1);
-        arr_3_2.findViewById(R.id.arr_3_2);
-        arr_3_3.findViewById(R.id.arr_3_3);
-        arr_3_4.findViewById(R.id.arr_3_4);
+        arr_3_0 = findViewById(R.id.arr_3_0);
+        arr_3_1 = findViewById(R.id.arr_3_1);
+        arr_3_2 = findViewById(R.id.arr_3_2);
+        arr_3_3 = findViewById(R.id.arr_3_3);
+        arr_3_4 = findViewById(R.id.arr_3_4);
 
-        arr_sorted.findViewById(R.id.arr_sorted);
-
-        button = (button).findViewById(R.id.button_sort);
+        tv_unsortedArray.setText(Arrays.toString(unsortedArray));
 
         button.setOnClickListener(new View.OnClickListener() {
+            //Code that is run after the button has been pressed
             @Override
             public void onClick(View v) {
-                generateArray();
                 updateDisplay();
-
             }
         });
 
